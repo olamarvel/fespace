@@ -4,10 +4,10 @@
 node_modules
 /.pnp
 .pnp.js
-videos
-pictures
-fonts
-jounrey
+/src/videos
+/src/pictures
+/public/fonts
+/jounrey
 /.env
 
 # testing
