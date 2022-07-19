@@ -35,7 +35,7 @@ h2 {
 }
 
 p {
-  @apply text-dark text-base leading-tight py-2 first-letter:text-xl;
+  @apply text-dark text-base leading-tight py-2 break-words first-letter:text-xl;
   @apply first-letter:uppercase first-letter:font-medium;
 }
 img {
@@ -52,5 +52,8 @@ img {
   }
   .box {
     @apply w-4/5 sm:w-[500px] md:w-[700px] lg:w-[950px] xl:w-[1150px] 2xl:w-[1450px] mx-auto;
+  }
+  .center{
+    @apply flex justify-center items-center
   }
 }

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '../icons'
-import { SocialIcons } from './'
+import { SocialIcons } from '.'
 import { FunctionalContext } from '../contexts'
 
 const Dropdown = ({ name, drops, hasChildren = true }) => {

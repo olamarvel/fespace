@@ -1,14 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FunctionalContext } from '../contexts'
-import { Log } from '../utils/log'
-import { useRequest, QCategoryTitle } from './'
+
+import { useRequest, QCategoryTitle } from '.'
 // import { MobileDropDownView } from './dropdown'
 
 const Reversed = React.createContext(false)
-const CategoryBar = ({ name, closeCategory, reversed = false }) => {
+const CategoryBar = ({ name, reversed = false }) => {
   const category = useRequest(QCategoryTitle)
-  const close = useContext(FunctionalContext)
   const show = category ? category.slice(0, 4) : false
   return (
     <>

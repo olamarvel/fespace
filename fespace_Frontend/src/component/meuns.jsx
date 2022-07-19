@@ -2,7 +2,6 @@ import Dropdown from './dropdown'
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { FunctionalContext } from '../contexts'
-import { useRequest ,QMeun} from '.' 
 
 export const meun = [
   'Read',

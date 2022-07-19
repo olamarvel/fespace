@@ -1,7 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { Header, Q_F_Category, Section, useRequest } from '../component'
-import { Log } from '../utils/log'
+import {  Q_F_Category, Section, useRequest } from '../component'
 
 const Read = () => {
   const { category } = useParams()

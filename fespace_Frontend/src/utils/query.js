@@ -15,8 +15,7 @@ export const QCategory = `*[_type == "category"]{title,"Posts": *[_type=='post' 
 export const QCategoryTitle = `*[_type == "category"].title`
 export const QMeun = `*[_type == "meun"]`
 
-export const Q_F_Category =
-  `*[_type == "category" && title==$type]{
+export const Q_F_Category = `*[_type == "category" && title==$type]{
     title,
     "Posts": *[_type=='post' && references(^._id)]{
       title,
@@ -29,3 +28,16 @@ export const Q_F_Category =
       }
     }
   }`
+
+export const Q_Event = `*[_type == "event"]{
+  title,
+  slug,
+  description,
+  from,
+  to,
+  Flyer{asset->{_id,url}},
+  ticket,
+  guests[]->{name,slug,image{asset->{_id,url}}}
+}`
+
+

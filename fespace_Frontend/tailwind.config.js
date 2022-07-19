@@ -10,7 +10,7 @@ module.exports = {
         dark: '#333333',
       },
       boxShadow: {
-        'up': '0 -2px 0px 0px var(--tw-shadow)',
+        'card': '0 0 5px  rgba(0, 0, 0, 0.3)',
       },
 
       fontFamily: {
