@@ -47,6 +47,12 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'comments',
+      title: 'Comments',
+      type: 'array',
+      of: [{ type: 'comment' }],
+    },
   ],
 
   preview: {

@@ -8,7 +8,7 @@ const Footer = () => {
     <div className=" bg-primary">
       {/* <div className="container mx-auto "> */}
       <CategoryBar name="Read" reversed={false} />
-      <div className="z-20  shadow grid grid-rows-4 sm:grid-cols-4 container mx-auto justify-center box px-4 py-2 sm:p-4  text-white">
+      <div className="z-20  shadow grid grid-rows-4 sm:grid-cols-4 container mx-auto justify-center box px-4 py-2 sm:py-4  text-white">
         <Logo styles="" />
         {/* <div className="col-span-8 flex"> */}
         <span className="grow">08064526418</span>

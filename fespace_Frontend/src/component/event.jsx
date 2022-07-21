@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Countdown from 'react-countdown'
+import { Link } from 'react-router-dom'
 import { ICONS, DropdownUi as Dropdown } from '.'
 import { urlFor } from '../client'
 
@@ -26,9 +27,9 @@ const Event = ({
   const src = Flyer && urlFor(Flyer).height(310).url()
 
   return (
-    <div className="w-full grid grid-cols-2 gap-4 rounded shadow-card h-fit items-center my-8">
+    <div className="w-full grid md:grid-cols-2 gap-4 rounded shadow-card h-fit items-center my-8 grid-cols-1">
       <div
-        className={`w-full h-full center relative bg-no-repeat bg-center bg-cover `}
+        className={`w-full h-72 rounded center relative bg-no-repeat bg-center bg-cover md:h-full `}
         style={{
           backgroundImage: `url(${''+ src + ''})`,
         }}
@@ -50,7 +51,9 @@ const Event = ({
         </div>
         <p>{description}</p>
         <button className="btn">
+          <Link to={ticket}>
           Ticket <FontAwesomeIcon icon={ICONS.faArrowRightLong} />
+          </Link>
         </button>
       </div>
     </div>
