@@ -1,5 +1,5 @@
 import React from 'react'
-import { loader } from '.'
+import {loader}  from './'
 import { Section, QCategory, QFeatured } from '../component'
 
 const _Featured = ({ result }) => <Section title={'featrued'} posts={result} />

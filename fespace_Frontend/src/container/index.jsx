@@ -1,5 +1,6 @@
-export {  loader } from './loader'
+export {  default as loader } from './loader'
 export { Home } from './home'
+export { default as Login } from './login'
 export { default as Read } from './read'
 export { default as Products } from './products'
 export { default as Footer } from './footer'

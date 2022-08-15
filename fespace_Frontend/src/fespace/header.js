@@ -1,73 +1,14 @@
-import React, { useEffect, useRef } from 'react'
-import Masonry from 'react-masonry-css'
+import React from 'react'
 import TypeIt from 'typeit-react'
 import gsap from 'gsap'
 import { ScrollToPlugin } from 'gsap/all'
+import { Masonary } from './'
 gsap.registerPlugin(ScrollToPlugin)
+ 
 const Header = ({ images }) => {
-  const scroll = useRef(false)
-  useEffect(() => {
-    if (!scroll.current) return
-    console.log('tweening')
-    // var tl = gsap.timeline({
-    //   repeat: 3,
-    //   repeatDelay: 1,
-    //   onComplete: () => {
-    //     console.log('done')
-    //   },
-    // })
-
-    const tween = gsap.timeline({
-
-      repeat: -1,
-      repeatDelay: 1,
-      onComplete: () => {
-        console.log('done')
-      },
-    })
-    tween.to(scroll.current, {
-      scrollTo: 'max',
-      ease: 'none',
-      duration: 30,
-    })
-    tween
-      .to(
-        scroll.current,
-        {
-          scrollTo: { y: 0 },
-          ease: 'none',
-          duration: 30,
-        },
-        '>'
-      )
-      .play()
-    return () => {
-      tween.kill()
-    }
-  }, [scroll])
-
   return (
-    <div className="relative">
-      <div
-        className="w-full bg-white h-[75vh] min-h-[500px] max-h-[650px] relative  border-b-primary shadow overflow-y-scroll scroll-hide"
-        ref={scroll}
-      >
-        {images && (
-          <Masonry
-            breakpointCols={{
-              default: 4,
-              2400: 6,
-              1200: 4,
-              700: 2,
-              500: 1,
-            }}
-            className="flex -ml-2 w-[auto] "
-            columnClassName="pl-2 top-0 left-0"
-          >
-            {images}
-          </Masonry>
-        )}
-      </div>
+    <div className="relative  h-[75vh] min-h-[500px] max-h-[650px]">
+      <Masonary  images={images} />
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-dark/30 flex justify-center items-center font-Lora">
         <span className="text-4xl md:text-8xl text-white">
           I am{' '}
@@ -256,3 +197,5 @@ function setText(instance) {
     .pause(183)
     .delete(1)
 }
+
+

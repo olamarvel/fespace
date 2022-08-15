@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 // import { loader } from '../container'
 import { Card } from './'
 const Section = ({ title = 'section', posts }) => {
+
   return (
     <div className="container mx-auto box py-12 flex flex-col ite ">
       <Link to={'Read/' + title}>

@@ -1,17 +1,17 @@
 import  { useEffect, useState } from 'react'
 import { Client } from '../client'
 
-const UseRequest = (query,params= {}) => {
+const UseRequest = (query,params= {},reloadAble) => {
   
   const [data, setData] = useState(false)
-
+  const [reload, Reload] = useState(0);
   useEffect(() => {
     Client.fetch(query,params)
       .then((_data) => setData(_data))
       .catch(console.error)
-  }, [query,params])
+  }, [query,params,reload])
 
-  return data
+  return reloadAble ? {data,Reload} :{ data }
 }
 
 export default UseRequest

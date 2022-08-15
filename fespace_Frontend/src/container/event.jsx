@@ -1,8 +1,7 @@
 import React from 'react'
 
 import { Q_Event, Event } from '../component'
-import { loader } from './'
-
+import {loader}  from './'
 const Events = ({ result }) => {
   return (
     <div className='container mx-auto box'>

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '../icons'
-import { SocialIcons } from '.'
+import { SocialIcons, Logo } from '.'
 import { FunctionalContext } from '../contexts'
 
 const Dropdown = ({ name, drops, hasChildren = true }) => {
@@ -20,7 +20,7 @@ const Dropdown = ({ name, drops, hasChildren = true }) => {
       <div className="relative  w-3/4 md:w-fit ">
         <div className=" px-1 lg:px-4 uppercase mx-1 lg:mx-3 cursor-pointer  w-full flex justify-between items-center my-4">
           <NavLink
-            to={name === 'Read' ? '/' : name}
+            to={name === 'Read' ? '/' : '/' + name}
             className={({ isActive }) =>
               isActive
                 ? 'text-secondary md:text-dark hover:text-secondary'
@@ -75,26 +75,36 @@ export const MobileDropDownView = ({ drops, name, closeCategory }) => {
     closeCategory()
   }
   return (
-    <div className=" fixed top-0 left-0 w-3/4 bg-white text-dark py-2 flex flex-col z-10 text-lg h-full shadow-xl">
-      {drops.map((drop, i) => (
-        <NavLink
-          to={name + '/' + drop}
-          className={({ isActive }) =>
-            (isActive ? 'text-secondary' : '') +
-            'flex justify-between items-center'
-          }
-          key={drop + '' + i}
-          onClick={click}
-        >
-          <div className="px-3 py-1 mb-4 pr-12 cursor-pointer hover:text-secondary  hover:border-b-2 w-3/4 flex justify-between">
-            <span>{drop}</span>
-            <FontAwesomeIcon
-              icon={faCaretDown}
-              className={'transition-all duration-500 -rotate-90'}
-            />
-          </div>
-        </NavLink>
-      ))}
+    <div className=" fixed top-0 left-0 w-3/4 bg-white text-dark py-2 z-10 text-lg h-full shadow-xl">
+      <Logo styles="grow-[0] px-1 mx-1 " />
+      <div className="mx-3 mt-4 flex items-center ">
+        <FontAwesomeIcon
+          icon={faCaretDown}
+          className=" active:text-white rounded-full active:bg-dark   rotate-90"
+        />
+        <span className="ml-3">{name}</span>
+      </div>
+      <div className="border-l-2 ml-5 mt-6">
+        {drops.map((drop, i) => (
+          <NavLink
+            to={name + '/' + drop}
+            className={({ isActive }) =>
+              (isActive ? 'text-secondary' : '') +
+              'flex justify-between items-center'
+            }
+            key={drop + '' + i}
+            onClick={click}
+          >
+            <div className="px-3 py-1 mb-4 pr-12 cursor-pointer hover:text-secondary  hover:border-b-2 w-3/4 flex justify-between">
+              <span>{drop}</span>
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                className={'transition-all duration-500 -rotate-90'}
+              />
+            </div>
+          </NavLink>
+        ))}
+      </div>
 
       <SocialIcons />
     </div>
@@ -104,7 +114,7 @@ export const MobileDropDownView = ({ drops, name, closeCategory }) => {
 const DropDownView = ({ drops, name, clicked }) => {
   return (
     <div className="z-20 absolute bg-white shadow text-dark px-2 py-4 rounded-b-lg  hover:bg-white hover:text-dark">
-      {drops.map((drop, i) => ( 
+      {drops.map((drop, i) => (
         <div
           className="px-2 py-1 mb-4 w-fit pr-12 cursor-pointer hover:text-secondary  hover:border-b-2"
           onClick={clicked}

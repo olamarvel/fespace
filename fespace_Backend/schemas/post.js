@@ -53,6 +53,12 @@ export default {
       type: 'array',
       of: [{ type: 'comment' }],
     },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
   ],
 
   preview: {

@@ -1,4 +1,4 @@
-// import { PortableText } from '@portabletext/react'
+
 import { useNavigate } from 'react-router-dom'
 import { urlFor } from './'
 
@@ -8,7 +8,7 @@ const Card = ({ image, title, publishedAt, body, slug }) => {
   //   : urlFor(image).width(250).blur(10).url()F
   const click = () => {
     navigate(`/post/${slug.current}`)
-  }
+  } 
   return (
     
       <div className="shadow-lg h-full flex flex-col ">

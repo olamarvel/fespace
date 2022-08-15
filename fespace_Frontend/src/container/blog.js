@@ -9,9 +9,9 @@ const Blog = () => {
       <Header />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="Read/:category" element={<Read />} />
-        <Route path="Events" element={<Event />} />
-        <Route path="Donation" element={<Donation />} />
+        <Route path="read/:category" element={<Read />} />
+        <Route path="events" element={<Event />} />
+        <Route path="donation" element={<Donation />} />
       </Routes>
     </>
   )

@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Lora;
+  src: url(assets/fonts/Lora/Lora-VariableFont_wght.ttf) format('truetype'),
+    url(assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf) format('truetype'),
+    local(Lora);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: local(Roboto), url(assets/fonts/Roboto/Roboto-Regular.ttf) format('truetype'),
+    url(assets/fonts//Roboto/Roboto-Medium.ttf) format('truetype'),
+    url(assets/fonts//Roboto/Roboto-Light.ttf) format('truetype');
+  /* color: #333333; */
+}
+@font-face {
+  font-family: pacifioco;
+  src: local(pacifioco),
+    url(assets/fonts/pacifioco/Pacifico-Regular.ttf) format('truetype');
+
+  /* color: #333333; */
+}
+
 :root {
   --ti-cursor-color: #f47cc8;
 }
@@ -39,7 +61,7 @@ h2 {
 }
 
 p {
-  @apply text-dark text-base leading-tight py-2 break-words first-letter:text-xl;
+  @apply text-dark text-base leading-tight py-1 break-words first-letter:text-xl;
   @apply first-letter:uppercase first-letter:font-medium;
 }
 img {
@@ -57,14 +79,33 @@ img {
   .box {
     @apply w-4/5 sm:w-[500px] md:w-[700px] lg:w-[950px] xl:w-[1150px] 2xl:w-[1450px] mx-auto;
   }
-  .center{
-    @apply flex justify-center items-center
+  .center {
+    @apply flex justify-center items-center;
   }
-  .scroll-hide{
-    -ms-overflow-style:none;
-    scrollbar-width:none;
+  .scroll-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   .scroll-hide::-webkit-scrollbar {
-    display:none;
+    display: none;
   }
+  .checkout{
+    @apply w-full
+  }
+  .checkout__label {
+    @apply block font-bold span text-xs pt-3
+  }
+  .checkout__input{
+    @apply border text-sm px-1 py-2
+  }
+  .checkout__select{
+    @apply border px-1 py-2
+  }
+  .checkout__select > option{
+    @apply text-sm
+  }
+  .checkout__subheading{
+    @apply col-span-12
+  }
+
 }

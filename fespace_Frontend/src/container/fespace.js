@@ -1,8 +1,9 @@
 import { Header } from '../fespace'
-import { useEffect, useState } from 'react'
-import { unSplash } from '../utils/unsplash'
 import { QCategory, Section } from '../component'
-import { loader } from './loader'
+import {loader}  from './'
+import useSplash from '../utils/useSplash'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const demo = ['inspirations', 'interviews', 'events']
 
@@ -18,17 +19,15 @@ const _Categorized = ({ result }) => {
 }
 const Categorized = loader(_Categorized, QCategory)
 const Fespace = () => {
-  const [images, setImages] = useState(null)
-
+  const img = useSplash()
+  const navigate = useNavigate();
   useEffect(() => {
-    unSplash.then((Images) => {
-      setImages(Images)
-    })
-  }, [])
-
+    const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+    if(!userInfo) navigate('/login?redirect=fespace', { replace: true });
+  }, [navigate]);
   return (
     <div>
-      <Header images={images} />
+      <Header images={img} />
       <Categorized />
     </div>
   )

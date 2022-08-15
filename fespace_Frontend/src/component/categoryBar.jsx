@@ -6,7 +6,7 @@ import { useRequest, QCategoryTitle } from '.'
 
 const Reversed = React.createContext(false)
 const CategoryBar = ({ name, reversed = false }) => {
-  const category = useRequest(QCategoryTitle)
+  const {data:category} = useRequest(QCategoryTitle)
   const show = category ? category.slice(0, 4) : false
   return (
     <>
