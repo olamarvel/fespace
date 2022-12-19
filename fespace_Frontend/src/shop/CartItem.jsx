@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { PRODUCTCONTEXT } from '../contexts'
+import React from 'react'
+// import { PRODUCTCONTEXT } from '../contexts'
 
 const CartItem = ({ data, handleUpdateCartQty, handleRemoveFromCart }) => {
   // console.log(data)

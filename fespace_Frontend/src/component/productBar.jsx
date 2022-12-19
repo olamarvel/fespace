@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react'
-import { Context, PRODUCTCONTEXT } from '../contexts'
+import React, {  useState } from 'react'
+import { Context } from '../contexts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as ICONS from '../icons'
 import { TopBar, SideBar, Logo } from '.'

@@ -1,8 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { stripHtml } from 'string-strip-html'
 import { faCartPlus } from '../icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { PRODUCTCONTEXT } from '../contexts'
 
 const ProductItem = ({ data,handleAddToCart }) => {
   const { result } = stripHtml(data?.description)

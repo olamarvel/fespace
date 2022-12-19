@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { PRODUCTCONTEXT } from '../contexts';
+import React from 'react';
 import CartItem from './CartItem';
 
 

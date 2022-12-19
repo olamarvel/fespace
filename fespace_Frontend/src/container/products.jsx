@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 import { Slider } from '../component'
@@ -7,12 +7,11 @@ import commerce from '../commerce.js'
 import ProductsList from '../shop/productList'
 import ProductItem from '../shop/productItem'
 import Cart from '../shop/cart'
-import { PRODUCT } from '../contexts'
 import Checkout from '../shop/TheCheckout'
 
 // const cat = ['books', 'male', 'female', 'laptop', 'people', 'others']
 const Products = () => {
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState({})
   const [order, setOrder] = useState({})

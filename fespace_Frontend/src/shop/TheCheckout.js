@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import commerce from '../commerce'
 import AddressForm from './AddressForm'
 import PaymentForm from './PaymentForm'
@@ -8,7 +8,7 @@ import CartItem from './CartItem'
 const useToken = function (cart) {
   const [Token, setToken] = useState(false)
   const loading = useRef(false)
-  const { id } = useParams()
+  // const { id } = useParams()
 
   useEffect(() => {
     const generateToken = async () => {

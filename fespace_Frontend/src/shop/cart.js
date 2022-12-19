@@ -1,7 +1,6 @@
 // import React from 'react';
-import React, { useContext } from 'react'
+import React, {  } from 'react'
 // import { stripHtml } from 'string-strip-html'
-import { PRODUCTCONTEXT } from '../contexts'
 // import { Container, Typography, button, Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom'
 
