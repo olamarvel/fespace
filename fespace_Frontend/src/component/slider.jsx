@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { Navigation, Pagination, Autoplay } from 'swiper'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react/swiper-react.js'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ICONS } from './'
 

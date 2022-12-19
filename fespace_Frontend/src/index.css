@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*
 @font-face {
   font-family: Lora;
   src: url(assets/fonts/Lora/Lora-VariableFont_wght.ttf) format('truetype'),
@@ -14,15 +14,13 @@
   src: local(Roboto), url(assets/fonts/Roboto/Roboto-Regular.ttf) format('truetype'),
     url(assets/fonts//Roboto/Roboto-Medium.ttf) format('truetype'),
     url(assets/fonts//Roboto/Roboto-Light.ttf) format('truetype');
-  /* color: #333333; */
 }
 @font-face {
   font-family: pacifioco;
   src: local(pacifioco),
     url(assets/fonts/pacifioco/Pacifico-Regular.ttf) format('truetype');
 
-  /* color: #333333; */
-}
+}*/
 
 :root {
   --ti-cursor-color: #f47cc8;
