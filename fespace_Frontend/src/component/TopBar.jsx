@@ -8,10 +8,9 @@ const TopNavigation = ({ showIcons = true }) => {
         <Meuns></Meuns>
       </div>
       <div className={showIcons ? 'hidden md:block' : ''}>
-
        <SocialIcons block={true} />
       </div>
-    </Context>
+    </Context> 
   )
 }
 

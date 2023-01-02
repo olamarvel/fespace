@@ -13,7 +13,6 @@ const CategoryBar = ({ name, reversed = false }) => {
       {category && (
         <Reversed.Provider value={reversed}>
           <div className={`relative w-full  bg-white text-dark  flex flex-row z-10 text-lg  ${!reversed ? 'shadow-up' : "shadow-xl"} justify-around font-Pacifioco items-center`}>
-            
             {show &&
               show.map((drop, i) => (
                 <NavLink
@@ -51,17 +50,17 @@ function CategoryDropDown({ name, drops, hasChildren = true }) {
     <>
       <div className=" ">
         <div
-          className="border-dotted border-b-4 hover:border-secondary outline-none p-0 m-0 cursor-pointer lg:hidden"
+          className="border-solid border-b-4 hover:border-secondary outline-none p-0 m-0 cursor-pointer lg:hidden"
           onClick={click}
         >
-          more
+          All
         </div>
         <div
           className="border-dotted border-b-4 hover:border-secondary outline-none p-0 m-0 cursor-pointer hidden lg:inline-block"
           onMouseEnter={window.innerWidth >= window.medium ? mousein : null}
           // onMouseLeave={window.innerWidth >= window.medium ? mouseout : null}
         >
-          more
+          All
         </div>
         {hovered && hasChildren && (
           <DropDownView drops={drops} name={name} clicked={mouseout} />

@@ -17,7 +17,9 @@ const Dropdown = ({ name, drops, hasChildren = true }) => {
   const rotating = hovered ? ' -rotate-90 ml-1' : ''
   return (
     <>
-      <div className="relative  w-3/4 md:w-fit ">
+      <div className="relative  w-3/4 md:w-fit "
+        onMouseEnter={window.innerWidth >= window.medium ? mousein : null}
+        onMouseLeave={window.innerWidth >= window.medium ? mouseout : null}>
         <div className=" px-1 lg:px-4 uppercase mx-1 lg:mx-3 cursor-pointer  w-full flex justify-between items-center my-4">
           <NavLink
             to={name === 'Read' ? '/' : '/' + name}
@@ -27,8 +29,6 @@ const Dropdown = ({ name, drops, hasChildren = true }) => {
                 : 'hover:text-secondary'
             }
             onClick={close}
-            onMouseEnter={window.innerWidth >= window.medium ? mousein : null}
-            onMouseLeave={window.innerWidth >= window.medium ? mouseout : null}
           >
             {name}{' '}
             {hasChildren && (
