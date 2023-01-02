@@ -1,13 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as ICONS from '../icons'
 import { useRequest, QCategoryTitle } from '.'
-import Container from '../layouts/container'
 // import { MobileDropDownView } from './dropdown'
 
-const Reversed = React.createContext(false)
 const CategoryBar = ({ name, reversed = false }) => {
   const { data: category } = useRequest(QCategoryTitle)
   const [showCategory, setShowCategory] = useState(false)
