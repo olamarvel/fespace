@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { Slider, Card } from '.'
 import { Comments } from './Comments'
 import { components } from './components'
+import Container from '../layouts/container'
   
 
 const RelatedCategory =
@@ -84,7 +85,7 @@ const _Post = ({ result, reload }) => {
   }
 
   return (
-    <section className="container mx-auto my-2  p-5 h-fit lg:grid lg:grid-cols-12 gap-4 ">
+    <Container className="my-2  p-5 h-fit lg:grid lg:grid-cols-12 gap-4 ">
       <section className="col-span-9  ">
         <article>
           <div className="w-full overflow-hidden rounded-lg">
@@ -125,7 +126,7 @@ const _Post = ({ result, reload }) => {
         />
       </section>
       <section className="col-span-3 bg-dark h-96 hidden lg:block"></section>
-    </section>
+    </Container>
   )
 }
 

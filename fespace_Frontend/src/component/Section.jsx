@@ -1,11 +1,12 @@
 // import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Container from '../layouts/container'
 // import { loader } from '../container'
 import { Card } from './'
 const Section = ({ title = 'section', posts }) => {
 
   return (
-    <div className="container mx-auto box py-12 flex flex-col ite ">
+    <Container className={'py-12 flex flex-col ite'}>
       <Link to={'Read/' + title}>
         <h3 className=" text-xl capitalize border-b-primary border-b-2 w-fit box-content cursor-pointer">
           {title}
@@ -32,7 +33,7 @@ const Section = ({ title = 'section', posts }) => {
           </div>
         )}
       </div>
-    </div>
+    </Container>
   )
 }
 
