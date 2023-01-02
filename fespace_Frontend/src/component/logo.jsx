@@ -7,7 +7,7 @@ const Logo = ({ path = '/',styles='' }) => {
       <Link to={path}>
         {/* <img src={logo} alt="Fespace Logo" className='w-16' /> */}
         <span className=" pr-5 h-fit cursor-pointer hover:shadow-sm hover:text-dark text-[0.75rem] lg:text-base">
-         quaverHelps
+          Quaver'sHelps
         </span>
       </Link>
     </div>

@@ -1,10 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 import { USER } from './contexts'
 import { Login, Products } from './container'
-import { Navbar, Post } from './component'
-import { Footer, Blog, Fespace } from './container'
+import { Post } from './component'
+import { Blog, Fespace } from './container'
 import './App.css'
 import { useEffect, useState } from 'react'
+import Root from './layouts/root'
 // import Post from './component/post'
 function App() {
   const [user, setUser] = useState(undefined)
@@ -30,13 +31,14 @@ function App() {
 function Webroot() {
   return (
     <>
-      <Navbar />
+    <Root>
+
       <Routes>
         <Route path="*" element={<Blog />} />
         <Route path="/FeSpace" element={<Fespace />} />
         <Route path="post/:slug" element={<Post  />} />
       </Routes>
-      <Footer />
+    </Root>
     </>
   )
 }
