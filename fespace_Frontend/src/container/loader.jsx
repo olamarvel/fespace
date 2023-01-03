@@ -1,21 +1,21 @@
-import React from 'react'
+import React, {  } from 'react'
 import { BounceLoader } from 'react-spinners'
 import useRequest from '../utils/useRequest'
 
 
-const loader = (Component, query ,reloadAble = false) => {
+const loader = (Component, query, reloadAble = false) => {
   return (props) => {
-    let params = props?.params || {}
-    const {data:posts,Reload:reload} = useRequest(query, params,reloadAble)
+    // let params = props?.params || {}
+    const { data: posts, Reload: reload } = useRequest(query, props.params, reloadAble)
     return (
       <div className={!posts ? ' relative min-h-[300px] w-full  ' : ''}>
         <BounceLoader
           size={60}
           color={'#f47cc8'}
           loading={!posts}
-          className = 'min'
+          className='min'
           cssOverride={{
-            position:'absolute',
+            position: 'absolute',
             top: '50%',
             left: '50%',
             transform: 'translate(-50%,-50%)',
