@@ -21,7 +21,7 @@ export const Q_F_Category = `*[_type == "category" && title==$type]{
     "Posts": *[_type=='post' && references(^._id)]{
       title,
       publishedAt,
-      body, 
+      body,
       slug,
       mainImage{
       asset->{_id,

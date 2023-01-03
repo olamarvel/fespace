@@ -6,7 +6,7 @@ export const Client = sanityClient({
   dataset: 'production', // this is from those question during 'sanity init'
   useCdn: true,
   apiVersion: '2022-07-08',
-  // token: process.env.REACT_APP_SANITY_API_TOKEN,
+  token: process.env.REACT_APP_SANITY_API_TOKEN,
 })
 
 const builder = imageUrlBuilder(Client)

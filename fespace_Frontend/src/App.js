@@ -6,6 +6,7 @@ import { Blog, Fespace } from './container'
 import './App.css'
 import { useEffect, useState } from 'react'
 import Root from './layouts/root'
+import Admin from './container/admin'
 // import Post from './component/post'
 function App() {
   const [user, setUser] = useState(undefined)
@@ -37,6 +38,7 @@ function Webroot() {
         <Route path="*" element={<Blog />} />
         <Route path="/FeSpace" element={<Fespace />} />
         <Route path="post/:slug" element={<Post  />} />
+        <Route path="/admin" element={<Admin  />} />
       </Routes>
     </Root>
     </>
