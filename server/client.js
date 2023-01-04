@@ -1,5 +1,7 @@
 import sanityClient from '@sanity/client'
-import imageUrlBuilder from '@sanity/image-url'
+import {config} from 'dotenv'
+config()
+// import imageUrlBuilder from '@sanity/image-url'
 
 export const Client = sanityClient({
   projectId: process.env.REACT_APP_SANITY_API_ID, // find this at manage.sanity.io or in your sanity.json
@@ -9,6 +11,6 @@ export const Client = sanityClient({
   token: process.env.REACT_APP_SANITY_API_TOKEN,
 })
 
-const builder = imageUrlBuilder(Client)
+// const builder = imageUrlBuilder(Client)
 
-export const urlFor = (source) => builder.image(source)
+// export const urlFor = (source) => builder.image(source)
