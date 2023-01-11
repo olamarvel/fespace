@@ -67,6 +67,8 @@ img {
 }
 
 @layer components {
+
+  
   .btn {
     @apply bg-primary text-white px-5 py-2 rounded-lg w-fit border-primary    transition-all duration-500 box-border;
     @apply hover:bg-white hover:text-primary hover:border;
